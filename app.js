@@ -19,9 +19,14 @@ app.use(express.urlencoded({ extended: true, limit: "50mb"}));
 const books = require("./Routes/booksroutes");
 const users = require("./Routes/userroutes");
 const borrow=require("./Routes/borrowroutes");
+
+//  Adding Routes
 app.use("/api/v1", books);
 app.use("/api/v1", users);
 app.use("/api/v1", borrow);
+
+
+
 //Error middleware
 app.use(Errormiddleware);
 module.exports = app;

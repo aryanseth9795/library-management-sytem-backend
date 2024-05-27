@@ -73,6 +73,9 @@ exports.getborrowed = catchasyncerror(async (req, res, next) => {
     borrow,
   });
 });
+
+
+
 // get detail borrow for updating /approving
 exports.getSingleborrowing = catchasyncerror(async (req, res, next) => {
   const borrow = await Borrow.findById(req.params.id).populate(
