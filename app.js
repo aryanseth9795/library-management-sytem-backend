@@ -24,6 +24,9 @@ const borrow=require("./Routes/borrowroutes");
 app.use("/api/v1", books);
 app.use("/api/v1", users);
 app.use("/api/v1", borrow);
+app.get("/", (req, res) => {  
+  res.send("Hello from the server");
+});
 
 
 
